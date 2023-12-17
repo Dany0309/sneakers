@@ -1,24 +1,26 @@
-const Card = () => {
+import style from "./Card.module.scss"
+const Card = (props) => {
+
     return ( 
-        <div className="card">
+        <div className={style.card}>
             {/* Иконка избранное */}
-            <div className="favorite">
+            <div className={style.favorite}>
               <img src="/img/unliked.svg" alt="Unliked" />
             </div>
 
             <img
               width={133}
               height={112}
-              src="/img/sneakers/1.jpg"
+              src={props.imgUrl}
               alt="Sneakers"
             />
-            <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
+            <h5>{props.title}</h5>
             <div className="d-flex justify-between align-center">
               <div className="d-flex flex-column">
                 <span>Цена:</span>
-                <b>12 999 руб.</b>
+                <b>{props.price} руб.</b>
               </div>
-              <button className="button">
+              <button className={style.button} onClick={props.onClick }>
                 <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
               </button>
             </div>

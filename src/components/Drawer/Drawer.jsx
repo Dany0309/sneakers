@@ -1,7 +1,8 @@
+import style from "./Drawer.module.scss"
 const Drawer = () => {
     return (
-        <div style={{display:"none"}} className="overlay"> 
-        <div className="drawer">
+        <div style={{display:"none"}} className={style.overlay}> 
+        <div className={style.drawer}>
         <h2 className="mb-30 d-flex justify-between">Корзина <img className="cu-p" src="/img/btn-remove.svg" alt="Remove" /></h2>
         <div className="items flex">
           <div className="cartItem d-flex align-center mb-20">
@@ -17,7 +18,7 @@ const Drawer = () => {
               <b>12 999 руб.</b>
             </div>
             <img
-              className="removeBtn"
+              className={style.removeBtn}
               src="/img/btn-remove.svg"
               alt="Remove"
             />
@@ -35,13 +36,13 @@ const Drawer = () => {
               <b>12 999 руб.</b>
             </div>
             <img
-              className="removeBtn"
+              className={style.removeBtn}
               src="/img/btn-remove.svg"
               alt="Remove"
             />
           </div>
         </div>
-        <div className="cartTotalBlock">
+        <div className={style.cartTotalBlock}>
           <ul>
             <li>
               <span>Итого:</span>
@@ -54,7 +55,7 @@ const Drawer = () => {
               <b>1074 руб.</b>
             </li> 
           </ul>
-         <button className="greenButton">Оформить заказ <img src="/img/arrow.svg" alt="Arrow" /></button>
+         <button className={style.greenButton}>Оформить заказ <img src="/img/arrow.svg" alt="Arrow" /></button>
         </div>
         </div>
       </div>
