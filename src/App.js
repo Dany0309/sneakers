@@ -24,7 +24,7 @@ function App() {
   // Запрос завершен
   // Добавление в корзину
   const onAddToCart = (obj) => {
-    setCartItems([...cartItems,obj])
+    setCartItems([...cartItems, obj]);
   };
   return (
     <div className="wrapper clear">
