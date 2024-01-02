@@ -1,5 +1,10 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
+import AppContext from "../context";
 const Header = (props) => {
+  // Подсчет суммы товара
+  const {cartItems}=React.useContext(AppContext);
+  const totalPrice=cartItems.reduce((sum,obj)=>obj.price + sum, 0);
   return (
     <header className="d-flex justify-between align-center p-40">
       <NavLink to="/">
@@ -27,7 +32,7 @@ const Header = (props) => {
             src="./img/box.svg"
             alt="Корзина"
           />
-          <span>1205 руб.</span>
+          <span>{totalPrice} руб.</span>
         </li>
         <li>
           <NavLink to="/favorites">
